@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4D8E62CF22382E8E00987BE6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8E62CE22382E8E00987BE6 /* Profile.swift */; };
-		4D8E62D12238366B00987BE6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8E62D02238366B00987BE6 /* ViewModel.swift */; };
 		4DC35A5F2240EC6100DA88C3 /* MessageAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC35A5E2240EC6100DA88C3 /* MessageAlert.swift */; };
 		4DCB33FB2237CC2200EBB2F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB33FA2237CC2200EBB2F0 /* AppDelegate.swift */; };
 		4DCB33FD2237CC2200EBB2F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB33FC2237CC2200EBB2F0 /* ViewController.swift */; };
@@ -33,7 +32,6 @@
 /* Begin PBXFileReference section */
 		2F5690B75D95421F01A298B1 /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
 		4D8E62CE22382E8E00987BE6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		4D8E62D02238366B00987BE6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4DC35A5E2240EC6100DA88C3 /* MessageAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAlert.swift; sourceTree = "<group>"; };
 		4DCB33F72237CC2200EBB2F0 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCB33FA2237CC2200EBB2F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,14 +97,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4D8E62D422383B1D00987BE6 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				4D8E62D02238366B00987BE6 /* ViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		4DC35A5D2240EC3600DA88C3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,7 +132,6 @@
 				4DC35A5D2240EC3600DA88C3 /* Extensions */,
 				4D8E62D222383AF100987BE6 /* Model */,
 				4D8E62D322383B0E00987BE6 /* View */,
-				4D8E62D422383B1D00987BE6 /* ViewModel */,
 				4DCB33FE2237CC2200EBB2F0 /* Main.storyboard */,
 				4DCB34012237CC2300EBB2F0 /* Assets.xcassets */,
 				4DCB34032237CC2300EBB2F0 /* LaunchScreen.storyboard */,
@@ -345,7 +334,6 @@
 				4DCB33FD2237CC2200EBB2F0 /* ViewController.swift in Sources */,
 				4DC35A5F2240EC6100DA88C3 /* MessageAlert.swift in Sources */,
 				4D8E62CF22382E8E00987BE6 /* Profile.swift in Sources */,
-				4D8E62D12238366B00987BE6 /* ViewModel.swift in Sources */,
 				4DCB33FB2237CC2200EBB2F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

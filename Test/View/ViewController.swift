@@ -40,7 +40,9 @@ class ViewController: UIViewController {
                             switch view{
                             case "hz":
                                 let textLabel = UILabel()
-                                textLabel.text = self.textData!["hz"]
+                                for (key, _) in self.textData! {
+                                    textLabel.text = self.textData![key]
+                                }
                                 let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapText))
                                 textLabel.isUserInteractionEnabled = true
                                 textLabel.addGestureRecognizer(tap)
@@ -48,7 +50,9 @@ class ViewController: UIViewController {
                                
                             case "picture":
                                 let picture = UIImageView()
-                                picture.image = UIImage(data: self.pictureData!["Голова"]!)
+                                for (key, _) in self.pictureData! {
+                                    picture.image = UIImage(data: self.pictureData![key]!)
+                                }
                                 picture.contentMode = .scaleAspectFit
                                 let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapPicture))
                                 picture.isUserInteractionEnabled = true
@@ -101,11 +105,15 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate{
     }
     
     @objc func tapText(sender:UITapGestureRecognizer) {
-        MessageAlert(messageText: "\((textData?.keys)!)", controller: self)
+        for (key, _) in textData! {
+            MessageAlert(messageText: "\(key)", controller: self)
+        }
     }
     
     @objc func tapPicture(sender:UITapGestureRecognizer) {
-         MessageAlert(messageText: "\((pictureData?.keys)!)", controller: self)
+        for (key, _) in pictureData! {
+            MessageAlert(messageText: "\(key)", controller: self)
+        }
     }
 }
 
