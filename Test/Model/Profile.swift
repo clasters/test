@@ -1,26 +1,30 @@
-
 struct Root: Decodable {
-    let data: [Data]
+    let data: [Datum]
     let view: [String]
-   }
-
-struct Data: Decodable {
-    let name: String?
-    let data: ViewData?
 }
 
-struct Variants: Decodable {
-    let id: Int?
+struct Datum: Decodable {
+    let name: String
+    let data: DataClass
+}
+
+struct DataClass: Decodable {
     let text: String?
-}
-
-struct ViewData: Decodable {
     let url: String?
-    let text: String?
-    let selectedId: Int?
-    let variants: [Variants]?
+    let selectedID: Int?
+    let variants: [Variant]?
+    
+    enum CodingKeys: String, CodingKey {
+        case text, url
+        case selectedID = "selectedId"
+        case variants
+    }
 }
 
+struct Variant: Decodable {
+    let id: Int
+    let text: String
+}
 
 
 
