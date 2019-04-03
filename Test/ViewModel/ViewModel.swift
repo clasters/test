@@ -17,12 +17,12 @@ class ViewModel: NSObject{
         return profile!.view
     }
     
-    func getData(name: String) -> NameData {
+    func getData(name: String) -> NameData? {
         var returnValue = NameData(name: "String")
         
         let text = TextData()
-        let picture: Picture
-        let selector: SelVariants
+        var picture: Picture
+        var selector: SelVariants
         
         
         for data in profile!.data{
@@ -41,15 +41,15 @@ class ViewModel: NSObject{
                 }
                 picture = Picture(name: data.name, picture: image, text: data.data.text ?? " Default ")
                 
-                return picture
+                returnValue = picture
             }
             else if data.name == "selector" && data.name == name{
                 selector = SelVariants(name: data.name,
                                        selectedId: data.data.selectedID ?? 0,
                                        variants: data.data.variants ?? [Variant(id: 0, text: " Default ")])
                 
-                return selector
-            }
+                returnValue = selector
+            } 
         }
         
         
